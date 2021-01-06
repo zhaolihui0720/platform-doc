@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+    <meta charset="UTF-8">
+    <title>Platform Doc 在线文档</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="Description">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/docsify/4.9.4/themes/vue.css">
+	<script src="https://cdn.jsdelivr.net/npm/docsify-plugin-codefund/index.js"></script>
 </head>
 <body>
-  <div id="app"></div>
-  <script>
+<div id="app">加载中</div>
+<script>
     window.$docsify = {
-      name: '',
-      repo: '',
-	  loadSidebar: true,
-	  coverpage: true
+        name: 'Platform Doc 在线文档',
+        maxLevel: 4,
+        subMaxLevel: 4,
+        loadSidebar: true,
+        repo: 'https://github.com/zhaolihui0720/platform-doc',
+        autoHeader: true,
+        auto2top: true,
+        search: {
+            noData: '没有结果!',
+            paths: 'auto',
+            placeholder: '搜索',
+            depth: 3
+        }
     }
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+</script>
+<script src="https://cdn.bootcss.com/docsify/4.9.4/docsify.min.js"></script>
+<script src="https://cdn.bootcss.com/docsify/4.9.4/plugins/search.js"></script>
+<script src="https://cdn.bootcss.com/docsify/4.9.4/plugins/zoom-image.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-java.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.js"></script>
+
+<script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+</script>
 </body>
 </html>
